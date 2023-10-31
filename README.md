@@ -1058,7 +1058,7 @@ The problem with this approach is it causes complex issues with the type inferen
 
 #### Typing Component Props
 
-This is intended as a basic orientation and reference for React developers familiarizing with TypeScript.
+This is intended as a basic orientation and reference for React developers familiarized with TypeScript.
 
 #### Basic Prop Types Examples
 
@@ -1436,7 +1436,7 @@ Of course, if you're making any sort of significant form, [you should use Formik
 <details>
 <summary><b>What about <code>InputEvent</code>?</b></summary>
 
-You've probably noticed that there is no `InputEvent`. This is because it is not supported by Typescript as the event itself has no fully browser support and may behave differently in different browsers. You can use `KeyboardEvent` instead.
+You've probably noticed that there is no `InputEvent`. This is because it is not supported by Typescript as the event itself has no full browser support and may behave differently in different browsers. You can use `KeyboardEvent` instead.
 
 Sources:
 
@@ -2299,7 +2299,7 @@ Fret not! There are more than a couple of ways in which you can solve this probl
 
 ##### Slapping `any` on everything
 
-A **lazier** way would be to create a new type declaration file, say `typedec.d.ts`– if you don't already have one. Ensure that the path to file is resolvable by TypeScript by checking the `include` array in the `tsconfig.json` file at the root of your directory.
+A **lazier** way would be to create a new type declaration file, say `typedec.d.ts`– if you don't already have one. Ensure that the path to the file is resolvable by TypeScript by checking the `include` array in the `tsconfig.json` file at the root of your directory.
 
 ```json
 // inside tsconfig.json
@@ -2319,7 +2319,7 @@ Within this file, add the `declare` syntax for your desired module, say `my-unty
 declare module "my-untyped-module";
 ```
 
-This one-liner alone is enough if you just need it to work without errors. A even hackier, write-once-and-forget way would be to use `"*"` instead which would then apply the `Any` type for all existing and future untyped modules.
+This one-liner alone is enough if you just need it to work without errors. An even hackier, write-once-and-forget way would be to use `"*"` instead which would then apply the `Any` type for all existing and future untyped modules.
 
 This solution works well as a workaround if you have less than a couple untyped modules. Anything more, you now have a ticking type-bomb in your hands. The only way of circumventing this problem would be to define the missing types for those untyped modules as explained in the following sections.
 
@@ -2494,7 +2494,7 @@ Source: https://twitter.com/ryanflorence/status/1085745787982700544?s=20
   - [Some misconceptions here](https://twitter.com/SeaRyanC/status/1418678670739218438?s=20).
 - `O[K]`: property lookup
 - `[K in O]`: mapped types
-- `+` or `-` or `readonly` or `?`: addition and subtraction and readonly and optional modifiers
+- `+` or `-` or `readonly` or `?`: addition and subtraction and read-only and optional modifiers
 - `x ? Y : Z`: Conditional types for generic types, type aliases, function parameter types
 - `!`: Nonnull assertion for nullable types
 - `=`: Generic type parameter default for generic types
@@ -2528,7 +2528,7 @@ These are all built in, [see source in es5.d.ts](https://github.com/microsoft/Ty
 - `OmitThisParameter`: remove the 'this' parameter from a function type.
 - `Parameters`: a tuple of a function's parameter types
 - `Partial`: Make all properties in an object optional
-- `Readonly`: Make all properties in an object readonly
+- `Readonly`: Make all properties in an object read-only
 - `ReadonlyArray`: Make an immutable array of the given type
 - `Pick`: A subtype of an object type with a subset of its keys
 - `Record`: A map from a key type to a value type
@@ -2629,7 +2629,7 @@ const f = (e: PlotlyHTMLElement) => {
 };
 ```
 
-You dont always have to implement the module, you can simply import the module as `any` for a quick start:
+You don't always have to implement the module, you can simply import the module as `any` for a quick start:
 
 ```tsx
 // my-typings.ts
